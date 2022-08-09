@@ -1,0 +1,5 @@
+package com.dip.myapp.member;
+
+public class MemberController {
+
+}

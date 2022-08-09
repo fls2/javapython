@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block head %}
+<script>
+    var a = 10;
+    function doA(){
+        $('img').attr('src','/img/'+a);
+        a++;
+    }
+</script>
+{% endblock %}
+{% block body %}
+<div>
+    <a href="/insert">insert</a>
+여기서 내용표시
+
+<br>
+{{key1}}
+<img src="/img/55" >
+<input type="button" onclick="doA()">
+</div>
+{% endblock %}

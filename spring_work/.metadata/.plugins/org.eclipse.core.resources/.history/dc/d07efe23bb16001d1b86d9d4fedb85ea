@@ -1,0 +1,5 @@
+package com.dip.mycompany.config;
+
+public class AppCtx {
+
+}

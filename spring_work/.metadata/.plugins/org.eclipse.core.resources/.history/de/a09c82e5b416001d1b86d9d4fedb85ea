@@ -1,0 +1,14 @@
+package com.dip.mycompany;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class MeberController {
+	
+	@GetMapping("/member")
+	public String member() {
+		return "member";
+	}
+
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="spring"/>
+<aop-project name="ex0801"/>
+<aop-project name="ex0802"/>
+<aop-project name="ex0803"/>
+<aop-project name="ex0808"/>
+</aop-reference-model>

@@ -1,0 +1,13 @@
+package com.dip.myapp.member;
+
+public class MemberDto {
+	
+	private String email;
+	private String name;
+	private String pwd;
+	
+	public MemberDto() {}
+	
+	
+
+}
