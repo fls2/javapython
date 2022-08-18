@@ -35,3 +35,9 @@
         delete from member
     </delete>
 </mapper>
+
+
+
+
+
+
