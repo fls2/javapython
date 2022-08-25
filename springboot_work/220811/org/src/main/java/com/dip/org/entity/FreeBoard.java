@@ -19,19 +19,16 @@ public class FreeBoard {
     @Column(name = "id",nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String title;
 
     @Column(columnDefinition = "TEXT")
     private String content;
-
     private String filename;
-    private String hits;
-
+    private int hits;
     private LocalDateTime regdate;
 
-    @OneToMany(fetch=FetchType.EAGER,cascade = CascadeType.ALL)
-    @JoinColumn(name = "board_id")
+    @OneToMany(mappedBy = "freeboard",fetch=FetchType.EAGER,cascade = CascadeType.ALL)
     private List<FreeBoardTail> list;
+
 
 }

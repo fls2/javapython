@@ -2,21 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout/layout}">
-
 <div layout:fragment="content" class="p-3">
     <h1>freeboard</h1>
-    <strong>dropdown>write</strong>
+    <strong>dropdown > write</strong>
     <div class="d-flex justify-content-center">
-        <div class="w-100 p-3" style="color:black;background-color:#efefef; border-radius:5px">
+        <div class="w-100 p-3" style="color:black; background-color:#efefef; border-radius:5px;">
             <form method="post" action="/freeboard/write" th:object="${freeBoardReq}" enctype="multipart/form-data">
+                <input type="hidden" name="id" th:value="${param.id}">
                 <h3>글쓰기</h3>
                 <div class="mb-3">
                     <label for="title" class="form-label">title</label>
                     <input type="text" class="form-control" id="title" name="title" placeholder="title"
-                           th:classappend="${#fields.hasErrors('title')} ? 'is-invalid'"th:field="*{title}">
-<!--                    <div class="valid-feedback">-->
-<!--                        Looks good!-->
-<!--                    </div>-->
+                           th:classappend="${#fields.hasErrors('title')} ? 'is-invalid'" th:field="*{title}">
                     <div th:if="${#fields.hasErrors('title')}" class="invalid-feedback">
                         not empty
                     </div>
@@ -24,7 +21,7 @@
                 <div class="mb-3">
                     <label for="content" class="form-label">content</label>
                     <textarea class="form-control" id="content" name="content" rows="10"
-                              th:classappend="${#fields.hasErrors('content')} ? 'is-invalid'"th:field="*{content}"></textarea>
+                              th:classappend="${#fields.hasErrors('content')} ? 'is-invalid'" th:field="*{content}"></textarea>
                     <div th:if="${#fields.hasErrors('content')}" class="invalid-feedback">
                         not empty
                     </div>
@@ -39,6 +36,7 @@
             </form>
         </div>
     </div>
+
 </div>
 
 </html>

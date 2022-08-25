@@ -11,9 +11,13 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+//@ToString
 public class FreeBoardTail {
 
-    private long board_id;
+    @ManyToOne(fetch=FetchType.EAGER,cascade = CascadeType.ALL)
+    @JoinColumn(name = "board_id")
+    private FreeBoard freeboard;
+
 
     @Id
     @Column(name = "id", nullable = false)
